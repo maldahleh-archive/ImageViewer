@@ -20,7 +20,10 @@ final class PhotoListController: UIViewController {
     }()
     
     lazy var photoPickerManager: PhotoPickerManager = {
-       return PhotoPickerManager(presentingController: self)
+       let manager = PhotoPickerManager(presentingController: self)
+        manager.delegate = self
+        
+        return manager
     }()
     
     override func viewDidLoad() {
