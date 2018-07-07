@@ -36,3 +36,10 @@ final class PhotoListController: UIViewController {
         photoPickerManager.present(animated: true)
     }
 }
+
+// MARK: - PhotoPickerManagerDelegate
+extension PhotoListController: PhotoPickerManagerDelegate {
+    func manager(_ manager: PhotoPickerManager, didPickImage image: UIImage) {
+        
+    }
+}
