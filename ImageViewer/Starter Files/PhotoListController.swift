@@ -10,7 +10,6 @@ import UIKit
 import CoreData
 
 final class PhotoListController: UIViewController {
-    
     @IBOutlet weak var photosCollectionView: UICollectionView!
     
     let context = CoreDataStack().managedObjectContext
@@ -20,9 +19,17 @@ final class PhotoListController: UIViewController {
         return PhotosDataSource(fetchRequest: request, managedObjectContext: self.context, collectionView: self.photosCollectionView)
     }()
     
+    lazy var photoPickerManager: PhotoPickerManager = {
+       return PhotoPickerManager(presentingController: self)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         photosCollectionView.dataSource = dataSource
+    }
+    
+    @IBAction func launchCamera(_ sender: Any) {
+        photoPickerManager.present(animated: true)
     }
 }
