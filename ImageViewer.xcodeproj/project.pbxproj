@@ -60,6 +60,51 @@
 			path = PhotoSelection;
 			sourceTree = "<group>";
 		};
+		4AE5288720F1409F0045C855 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				97C5209C1F7B403C005642A3 /* Photo.swift */,
+				97C5209E1F7B40D4005642A3 /* PhotosFetchedResultsController.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		4AE5288820F1426C0045C855 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				97C520921F7B3E31005642A3 /* CoreDataStack.swift */,
+				97C520991F7B4020005642A3 /* ImageViewer.xcdatamodeld */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		4AE5288920F144240045C855 /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				4AE5288A20F1444D0045C855 /* Cell */,
+				97C520951F7B3F60005642A3 /* PhotoListController.swift */,
+				97C520A01F7B40F8005642A3 /* PhotosDataSource.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		4AE5288A20F1444D0045C855 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				97C520971F7B3FBD005642A3 /* PhotoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4AE5288B20F1447F0045C855 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				97C520841F7B3E1A005642A3 /* Main.storyboard */,
+				97C520891F7B3E1A005642A3 /* LaunchScreen.storyboard */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		97C520741F7B3E1A005642A3 = {
 			isa = PBXGroup;
 			children = (
@@ -79,29 +124,16 @@
 		97C5207F1F7B3E1A005642A3 /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4AE5288720F1409F0045C855 /* Photos */,
+				4AE5288920F144240045C855 /* PhotosList */,
 				4ADC19EB20F0717E00B7BFA1 /* PhotoSelection */,
-				97C520941F7B3F46005642A3 /* Starter Files */,
+				4AE5288820F1426C0045C855 /* Storage */,
+				4AE5288B20F1447F0045C855 /* Interface */,
 				97C520801F7B3E1A005642A3 /* AppDelegate.swift */,
-				97C520841F7B3E1A005642A3 /* Main.storyboard */,
 				97C520871F7B3E1A005642A3 /* Assets.xcassets */,
-				97C520891F7B3E1A005642A3 /* LaunchScreen.storyboard */,
 				97C5208C1F7B3E1A005642A3 /* Info.plist */,
 			);
 			path = ImageViewer;
-			sourceTree = "<group>";
-		};
-		97C520941F7B3F46005642A3 /* Starter Files */ = {
-			isa = PBXGroup;
-			children = (
-				97C520921F7B3E31005642A3 /* CoreDataStack.swift */,
-				97C520951F7B3F60005642A3 /* PhotoListController.swift */,
-				97C520971F7B3FBD005642A3 /* PhotoCell.swift */,
-				97C520991F7B4020005642A3 /* ImageViewer.xcdatamodeld */,
-				97C5209C1F7B403C005642A3 /* Photo.swift */,
-				97C5209E1F7B40D4005642A3 /* PhotosFetchedResultsController.swift */,
-				97C520A01F7B40F8005642A3 /* PhotosDataSource.swift */,
-			);
-			path = "Starter Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

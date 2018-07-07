@@ -23,5 +23,3 @@ class PhotosFetchedResultsController: NSFetchedResultsController<Photo> {
         }
     }
 }
-
-

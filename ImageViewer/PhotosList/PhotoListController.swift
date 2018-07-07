@@ -40,6 +40,7 @@ final class PhotoListController: UIViewController {
 // MARK: - PhotoPickerManagerDelegate
 extension PhotoListController: PhotoPickerManagerDelegate {
     func manager(_ manager: PhotoPickerManager, didPickImage image: UIImage) {
+        let _ = Photo.with(image, in: context)
         manager.dismiss(animated: true, completion: nil)
     }
 }
