@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MobileCoreServices
 
 class PhotoPickerManager: NSObject {
     private let imagePickerController = UIImagePickerController()
@@ -14,7 +15,20 @@ class PhotoPickerManager: NSObject {
     
     init(presentingController: UIViewController) {
         self.presentingController = presentingController
+        
         super.init()
+        configure()
+    }
+    
+    private func configure() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            imagePickerController.sourceType = .camera
+            imagePickerController.cameraDevice = .front
+        } else {
+            imagePickerController.sourceType = .photoLibrary
+        }
+        
+        imagePickerController.mediaTypes = [kUTTypeImage as String]
     }
 }
 
