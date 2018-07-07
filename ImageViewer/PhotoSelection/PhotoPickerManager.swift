@@ -47,4 +47,8 @@ extension PhotoPickerManager {
     func present(animated: Bool) {
         presentingController.present(imagePickerController, animated: animated, completion: nil)
     }
+    
+    func dismiss(animated: Bool, completion: (() -> Void)?) {
+        imagePickerController.dismiss(animated: animated, completion: completion)
+    }
 }
