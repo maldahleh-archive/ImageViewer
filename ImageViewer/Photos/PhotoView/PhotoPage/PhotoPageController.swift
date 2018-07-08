@@ -15,21 +15,21 @@ class PhotoPageController: UIPageViewController {
         super.viewDidLoad()
         self.dataSource = photoDataSource
         
-        if let photoViewerController = photoViewerController(with: photoDataSource.currentPhoto()) {
+        if let photoViewerController = PhotoPageController.photoViewerControllerWith(photo: photoDataSource.currentPhoto(), controller: self) {
             setViewControllers([photoViewerController], direction: .forward, animated: false, completion: nil)
         }
-    }
-    
-    func photoViewerController(with photo: Photo) -> PhotoViewerController? {
-        guard let photoViewerController = storyboard?.instantiateViewController(withIdentifier: "PhotoViewerController") as? PhotoViewerController else { return nil }
-        
-        photoViewerController.photo = photo
-        return photoViewerController
     }
 }
 
 // MARK: - Utility
 extension PhotoPageController {
+    class func photoViewerControllerWith(photo: Photo, controller: UIViewController) -> PhotoViewerController? {
+        guard let photoViewerController = controller.storyboard?.instantiateViewController(withIdentifier: "PhotoViewerController") as? PhotoViewerController else { return nil }
+        
+        photoViewerController.photo = photo
+        return photoViewerController
+    }
+    
     func setPhotosTo(_ photos: [Photo]) {
         photoDataSource.setPhotosTo(photos)
     }

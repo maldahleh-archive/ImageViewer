@@ -20,7 +20,16 @@ class PagePhotoControllerDataSource: NSObject {
 // MARK: - UIPageViewCollectionDataSource
 extension PagePhotoControllerDataSource: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        return nil
+        guard let photoViewerController = viewController as? PhotoViewerController, let index = photos.index(of: photoViewerController.photo) else { return nil }
+        
+        if index == photos.startIndex {
+            return nil
+        } else {
+            let beforeIndex = photos.index(before: index)
+            let beforePhoto = photos[beforeIndex]
+            
+            return PhotoPageController.photoViewerControllerWith(photo: beforePhoto, controller: photoViewerController)
+        }
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
