@@ -44,3 +44,15 @@ extension PhotoListController: PhotoPickerManagerDelegate {
         manager.dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: - Segue
+extension PhotoListController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "showPhoto" { return }
+        
+        if let cell = sender as? UICollectionViewCell, let indexPath = photosCollectionView.indexPath(for: cell), let pageViewController = segue.destination as? PhotoPageController {
+            pageViewController.setPhotosTo(dataSource.photos)
+            pageViewController.setCurrentIndexAs(indexPath.row)
+        }
+    }
+}

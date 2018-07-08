@@ -10,8 +10,11 @@ import UIKit
 
 class PhotoViewerController: UIViewController {
     @IBOutlet weak var photoImageView: UIImageView!
+    weak var photo: Photo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoImageView.image = photo.image
     }
 }

@@ -11,6 +11,7 @@
 		4ADC19EF20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC19EE20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift */; };
 		4AE5288E20F1BE350045C855 /* PhotoPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5288D20F1BE350045C855 /* PhotoPageController.swift */; };
 		4AE5289020F1BF600045C855 /* PhotoViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5288F20F1BF600045C855 /* PhotoViewerController.swift */; };
+		4AE5289320F1C7EE0045C855 /* PagePhotoControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5289220F1C7EE0045C855 /* PagePhotoControllerDataSource.swift */; };
 		97C520811F7B3E1A005642A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C520801F7B3E1A005642A3 /* AppDelegate.swift */; };
 		97C520861F7B3E1A005642A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C520841F7B3E1A005642A3 /* Main.storyboard */; };
 		97C520881F7B3E1A005642A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C520871F7B3E1A005642A3 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		4ADC19EE20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManagerDelegate.swift; sourceTree = "<group>"; };
 		4AE5288D20F1BE350045C855 /* PhotoPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageController.swift; sourceTree = "<group>"; };
 		4AE5288F20F1BF600045C855 /* PhotoViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewerController.swift; sourceTree = "<group>"; };
+		4AE5289220F1C7EE0045C855 /* PagePhotoControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagePhotoControllerDataSource.swift; sourceTree = "<group>"; };
 		97C5207D1F7B3E1A005642A3 /* ImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C520801F7B3E1A005642A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97C520851F7B3E1A005642A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,10 +115,19 @@
 		4AE5288C20F1BE1B0045C855 /* PhotoView */ = {
 			isa = PBXGroup;
 			children = (
-				4AE5288D20F1BE350045C855 /* PhotoPageController.swift */,
+				4AE5289120F1C7C90045C855 /* PhotoPage */,
 				4AE5288F20F1BF600045C855 /* PhotoViewerController.swift */,
 			);
 			path = PhotoView;
+			sourceTree = "<group>";
+		};
+		4AE5289120F1C7C90045C855 /* PhotoPage */ = {
+			isa = PBXGroup;
+			children = (
+				4AE5288D20F1BE350045C855 /* PhotoPageController.swift */,
+				4AE5289220F1C7EE0045C855 /* PagePhotoControllerDataSource.swift */,
+			);
+			path = PhotoPage;
 			sourceTree = "<group>";
 		};
 		97C520741F7B3E1A005642A3 = {
@@ -222,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE5289320F1C7EE0045C855 /* PagePhotoControllerDataSource.swift in Sources */,
 				4ADC19ED20F0719300B7BFA1 /* PhotoPickerManager.swift in Sources */,
 				4AE5288E20F1BE350045C855 /* PhotoPageController.swift in Sources */,
 				97C5209D1F7B403C005642A3 /* Photo.swift in Sources */,
