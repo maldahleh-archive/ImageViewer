@@ -23,7 +23,10 @@ extension PagePhotoControllerDataSource: UIPageViewControllerDataSource {
         guard let photoViewerController = viewController as? PhotoViewerController, let index = photos.index(of: photoViewerController.photo) else { return nil }
         
         if index == photos.startIndex {
-            return nil
+            let finalIndex = photos.index(before: photos.endIndex)
+            let finalPhoto = photos[finalIndex]
+            
+            return PhotoPageController.photoViewerControllerWith(photo: finalPhoto, controller: photoViewerController)
         } else {
             let beforeIndex = photos.index(before: index)
             let beforePhoto = photos[beforeIndex]
@@ -33,7 +36,19 @@ extension PagePhotoControllerDataSource: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        return nil
+        guard let photoViewerController = viewController as? PhotoViewerController, let index = photos.index(of: photoViewerController.photo) else { return nil }
+        
+        if index == photos.index(before: photos.endIndex) {
+            let startIndex = photos.startIndex
+            let startPhoto = photos[startIndex]
+            
+            return PhotoPageController.photoViewerControllerWith(photo: startPhoto, controller: viewController)
+        } else {
+            let afterIndex = photos.index(after: index)
+            let afterPhoto = photos[afterIndex]
+            
+            return PhotoPageController.photoViewerControllerWith(photo: afterPhoto, controller: photoViewerController)
+        }
     }
 }
 
