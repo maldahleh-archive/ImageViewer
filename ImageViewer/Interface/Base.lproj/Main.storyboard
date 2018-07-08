@@ -102,7 +102,7 @@
         <!--Photo Page Controller-->
         <scene sceneID="u4Y-dH-3aR">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="p7e-pz-58e" customClass="PhotoPageController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="p7e-pz-58e" customClass="PhotoPageController" customModule="ImageViewer" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2mi-40-OQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1180" y="133"/>
