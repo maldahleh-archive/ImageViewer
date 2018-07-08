@@ -16,5 +16,7 @@ class PhotoZoomController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoImageView.image = photo.image
     }
 }
