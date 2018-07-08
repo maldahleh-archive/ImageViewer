@@ -17,4 +17,7 @@ class PhotoViewerController: UIViewController {
         
         photoImageView.image = photo.image
     }
+    
+    @IBAction func launchPhotoZoomController(_ sender: Any) {
+    }
 }

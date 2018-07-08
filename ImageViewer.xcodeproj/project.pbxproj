@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ABE356620F27B5C00F3D3EA /* PhotoZoomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABE356520F27B5C00F3D3EA /* PhotoZoomController.swift */; };
 		4ADC19ED20F0719300B7BFA1 /* PhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC19EC20F0719300B7BFA1 /* PhotoPickerManager.swift */; };
 		4ADC19EF20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC19EE20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift */; };
 		4AE5288E20F1BE350045C855 /* PhotoPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE5288D20F1BE350045C855 /* PhotoPageController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4ABE356520F27B5C00F3D3EA /* PhotoZoomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoZoomController.swift; sourceTree = "<group>"; };
 		4ADC19EC20F0719300B7BFA1 /* PhotoPickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManager.swift; sourceTree = "<group>"; };
 		4ADC19EE20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerManagerDelegate.swift; sourceTree = "<group>"; };
 		4AE5288D20F1BE350045C855 /* PhotoPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPageController.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4ABE356420F27B4100F3D3EA /* PhotoZoom */ = {
+			isa = PBXGroup;
+			children = (
+				4ABE356520F27B5C00F3D3EA /* PhotoZoomController.swift */,
+			);
+			path = PhotoZoom;
+			sourceTree = "<group>";
+		};
 		4ADC19EB20F0717E00B7BFA1 /* PhotoSelection */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4AE5289120F1C7C90045C855 /* PhotoPage */,
+				4ABE356420F27B4100F3D3EA /* PhotoZoom */,
 				4AE5288F20F1BF600045C855 /* PhotoViewerController.swift */,
 			);
 			path = PhotoView;
@@ -244,6 +255,7 @@
 				97C5209F1F7B40D4005642A3 /* PhotosFetchedResultsController.swift in Sources */,
 				97C520961F7B3F60005642A3 /* PhotoListController.swift in Sources */,
 				97C520811F7B3E1A005642A3 /* AppDelegate.swift in Sources */,
+				4ABE356620F27B5C00F3D3EA /* PhotoZoomController.swift in Sources */,
 				4ADC19EF20F0769A00B7BFA1 /* PhotoPickerManagerDelegate.swift in Sources */,
 				97C520A11F7B40F8005642A3 /* PhotosDataSource.swift in Sources */,
 			);
